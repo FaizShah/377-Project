@@ -26,7 +26,7 @@
         <tbody id="tbl-bdy">
         <tr id="tmp">
             <td id="floor"></td>
-            <td id="rmnum"><a href="public/pages/brinfo.html"></a></td>
+            <td id="rmnum"><a href="pages/brinfo.html"></a></td>
             <td id="type"></td>
             <td id="avg"></td>
         </tr>
@@ -45,7 +45,7 @@
             $('#tbl-bdy').append(tmp)
         }
 
-        $.getJSON('public/pages/samplebrs.json', function(data){
+        $.getJSON('pages/samplebrs.json', function(data){
             $.each(data, function(key,val){
                 addToTable(val['floor'], val['floor_room_str'], val['use_name'])
             });
