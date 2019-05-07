@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bathrooms Info</title>
+    <script src="/jquery.min.js"></script>
+    <style>
+        #tmp{
+            display: none
+        }
+    </style>
+</head>
+<body>
+
+    <h1>McKeldin Library</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Floor</th>
+            <th>Room Number</th>
+            <th>Type</th>
+            <th>Average Review</th>
+        </tr>
+        </thead>
+        <tbody id="tbl-bdy">
+        <tr id="tmp">
+            <td id="floor"></td>
+            <td id="rmnum"><a href="/brinfo.html"></a></td>
+            <td id="type"></td>
+            <td id="avg"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <script>
+        var addToTable = function(floor, room_num, usage){
+            tmp = $('#tmp').clone(true)
+            tmp.find('#floor').text(floor)
+            tmp.find('#rmnum').find('a').text(room_num)
+            tmp.find('#type').text(usage)
+            rand_int = Math.floor(Math.random() * Math.floor(10)) * 0.5
+            tmp.find('#avg').text(`${rand_int} / 5.0`)
+            tmp.prop('id', 'seen')
+            $('#tbl-bdy').append(tmp)
+        }
+
+        $.getJSON('/samplebrs.json', function(data){
+            $.each(data, function(key,val){
+                addToTable(val['floor'], val['floor_room_str'], val['use_name'])
+            });
+        })
+    </script>
+</body>
+</html>

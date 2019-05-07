@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="/jquery.min.js"></script>
+    <title>Home Page</title>
+    <style>
+        #tmp{
+            display: none
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Home</h1>
+
+    <h2>Buildings Directory</h2>
+
+    <ul id="building-list">
+        <li id="tmp"><a href="/bathrooms.html" id="link"></a></li>
+    </ul>
+    <script>
+        var addToList = function(name){
+            tmp = $('#tmp').clone(true)
+            tmp.find('#link').text(name)
+            tmp.prop('id', 'seen')
+            $('#building-list').append(tmp)
+        }
+
+        $.getJSON('/bldgnames.json', function(data){
+            $.each(data, function(key,val){
+                addToList(val['bldg_name'])
+            });
+        })
+    </script>
+</body>
+</html>

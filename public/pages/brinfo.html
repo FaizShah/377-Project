@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bathroom Info</title>
+    <script src="/jquery.min.js"></script>
+    <link href="/tailwind.css" rel="stylesheet">
+    <style>
+        #tmp{
+            display: none
+        }
+    </style>
+</head>
+<body>
+
+<h1>Bathroom: 1127A, Mckeldin Library</h1>
+
+<form action="/signup" method="post">
+    <p>
+        <label>Full Name</label><br>
+        <input type="text" name="full_name">
+    </p>
+    <p>
+        <label>Review Comment</label><br>
+        <input type="textarea" name="review_text">
+    </p>
+    <p>
+        <label>Cleanliness Score</label><br>
+        <input type="number" name="last_name">
+    </p>
+    <p>
+        <label>Odor Score</label><br>
+        <input type="number" name="email" required>
+    </p>
+    <p>
+        <label>Lighting Score</label><br>
+        <input type="number" name="phone">
+    </p>
+    <p>
+        <label>Solitude Score</label><br>
+        <input type="number" name="password">
+    </p>
+    <p>
+        <label>Overall Rating</label><br>
+        <input type="number" name="password">
+    </p>
+
+    <p>
+        <button type="reset">Submit Form</button>
+    </p>
+</form>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Review</th>
+        <th>Cleanliness Score</th>
+        <th>Odor Score</th>
+        <th>Lighting Score</th>
+        <th>Solitude Score</th>
+        <th>Overall Rating</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Fernando Riviera</td>
+            <td>Quiet, quaint and quite satisfying.</td>
+            <td>3.5 / 5.0</td>
+            <td>4.5 / 5.0</td>
+            <td>3 / 5.0</td>
+            <td>4 / 5.0</td>
+            <td>4.5 / 5.0</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
