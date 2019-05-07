@@ -62,7 +62,6 @@
                 margin-bottom: 30px;
             }
         </style>
-        <script src="{{ asset('js/app.js') }}"></script>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -79,8 +78,6 @@
                     @endauth
                 </div>
             @endif
-
-            <example-component></example-component>
 
             <div class="content">
                 <div class="title m-b-md">
