@@ -17,7 +17,7 @@
     <h2>Buildings Directory</h2>
 
     <ul id="building-list">
-        <li id="tmp"><a href="pages/bathrooms.html" id="link"></a></li>
+        <li id="tmp"><a href="./bathrooms.html" id="link"></a></li>
     </ul>
     <script>
         var addToList = function(name){
@@ -27,7 +27,7 @@
             $('#building-list').append(tmp)
         }
 
-        $.getJSON('pages/bldgnames.json', function(data){
+        $.getJSON('./bldgnames.json', function(data){
             $.each(data, function(key,val){
                 addToList(val['bldg_name'])
             });
