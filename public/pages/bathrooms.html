@@ -45,7 +45,7 @@
             $('#tbl-bdy').append(tmp)
         }
 
-        $.getJSON('/samplebrs.json', function(data){
+        $.getJSON('public/pages/samplebrs.json', function(data){
             $.each(data, function(key,val){
                 addToTable(val['floor'], val['floor_room_str'], val['use_name'])
             });
